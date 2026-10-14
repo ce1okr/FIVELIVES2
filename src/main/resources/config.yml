@@ -1,0 +1,55 @@
+starting-lives: 5
+
+combat:
+  duration-seconds: 45
+  # Also start combat when a mob hits you (default: only player hits)
+  tag-on-mob-damage: false
+  # Kill players who log out while in combat (costs them a life)
+  kill-on-logout: true
+  # Commands blocked while in combat (without the slash, lowercase)
+  blocked-commands:
+    - home
+    - homes
+    - spawn
+    - warp
+    - tpa
+    - tpahere
+    - back
+
+elimination:
+  # SPECTATOR = put them in spectator mode | BAN = ban them with /ban (uses console)
+  mode: SPECTATOR
+
+revive:
+  lives-restored: 3
+  # If true, only operators can use (right-click) the revive item
+  op-only-use: false
+  item-material: NETHER_STAR
+  item-name: "&b&lRevive Token"
+
+messages:
+  prefix: "&8[&cFiveLives&8] &7"
+  combat-start: "&cYou are in combat! Don't log out or teleport for &e{seconds}s&c."
+  combat-end: "&aYou are no longer in combat."
+  combat-actionbar: "&cIn combat: &e{seconds}s"
+  command-blocked: "&cYou can't use that while in combat! &7({seconds}s left)"
+  lost-life: "&cYou lost a life! &7Lives remaining: &e{lives}"
+  eliminated-self: "&4You are out of lives!"
+  eliminated-broadcast: "&e{player} &chas lost their final life and is eliminated!"
+  combat-logged-broadcast: "&e{player} &clogged out during combat and was killed."
+  ban-reason: "You ran out of lives!"
+  no-permission: "&cYou don't have permission to do that."
+  player-not-found: "&cThat player could not be found."
+  usage: "&cUsage: /fivelive <give REVIVE [player] [amount] | lives [player] | set <player> <lives> | revive <player> | reload>"
+  revive-given: "&aGave &e{amount}x &aRevive Token to &e{player}&a."
+  revive-received: "&aYou received &e{amount}x &aRevive Token."
+  revive-none: "&cThere is nobody to revive."
+  revive-op-only: "&cOnly operators can use this item."
+  revive-success: "&a{player} &7has been revived by &e{reviver}&7!"
+  revive-restored: "&aYou have been revived with &e{lives} &alives!"
+  not-eliminated: "&c{player} is not eliminated."
+  lives-self: "&7You have &e{lives} &7lives."
+  lives-other: "&e{player} &7has &e{lives} &7lives."
+  set-done: "&aSet &e{player}&a's lives to &e{lives}&a."
+  reloaded: "&aConfig reloaded."
+  gui-title: "Revive a player"
