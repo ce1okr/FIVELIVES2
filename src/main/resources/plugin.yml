@@ -1,0 +1,19 @@
+name: FiveLives
+version: 1.0.0
+main: com.example.fivelives.FiveLives
+api-version: '1.21'
+description: Five lives, combat timer and revive items.
+
+commands:
+  fivelive:
+    description: FiveLives main command
+    usage: /fivelive <give|lives|set|revive|reload>
+    aliases: [fivelives]
+
+permissions:
+  fivelive.admin:
+    description: Give revives, set lives, revive players, reload
+    default: op
+  fivelive.bypass:
+    description: Ignore the combat timer command blocking
+    default: false
